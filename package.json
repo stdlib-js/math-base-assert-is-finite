@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/math-base-assert-is-finite",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Test if a double-precision floating-point numeric value is finite.",
   "license": "Apache-2.0",
   "author": {
@@ -14,7 +14,7 @@
     }
   ],
   "main": "./lib",
-  "gypfile": true,
+  "gypfile": false,
   "directories": {
     "benchmark": "./benchmark",
     "doc": "./docs",
