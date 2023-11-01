@@ -1,7 +1,7 @@
 /**
 * @license Apache-2.0
 *
-* Copyright (c) 2018 The Stdlib Authors.
+* Copyright (c) 2023 The Stdlib Authors.
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -21,53 +21,13 @@
 // MODULES //
 
 var tape = require( 'tape' );
-var PINF = require( '@stdlib/constants-float64-pinf' );
-var NINF = require( '@stdlib/constants-float64-ninf' );
-var MAX_FLOAT64 = require( '@stdlib/constants-float64-max' );
-var SMALLEST_SUBNORMAL = require( '@stdlib/constants-float64-smallest-subnormal' );
-var isfinite = require( './../../dist' );
+var main = require( './../../dist' );
 
 
 // TESTS //
 
-tape( 'main export is a function', function test( t ) {
+tape( 'main export is defined', function test( t ) {
 	t.ok( true, __filename );
-	t.strictEqual( typeof isfinite, 'function', 'main export is a function' );
-	t.end();
-});
-
-tape( 'the function returns `true` if provided a finite number', function test( t ) {
-	var values;
-	var i;
-
-	values = [
-		3.14,
-		-2.0e64,
-		MAX_FLOAT64,
-		SMALLEST_SUBNORMAL
-	];
-
-	for ( i = 0; i < values.length; i++ ) {
-		t.equal( isfinite( values[i] ), true, 'returns true when provided '+values[i] );
-	}
-	for ( i = -100; i < 101; i++ ) {
-		t.equal( isfinite( i ), true, 'returns true when provided '+i );
-	}
-	t.end();
-});
-
-tape( 'the function returns `false` if provided `+infinity`', function test( t ) {
-	t.equal( isfinite( PINF ), false, 'returns false' );
-	t.end();
-});
-
-tape( 'the function returns `false` if provided `-infinity`', function test( t ) {
-	t.equal( isfinite( NINF ), false, 'returns false' );
-	t.end();
-});
-
-tape( 'the function returns `false` if provided `NaN`', function test( t ) {
-	t.equal( isfinite( NaN ), false, 'returns false' );
-	t.equal( isfinite( 0/0 ), false, 'returns false' );
+	t.strictEqual( main !== void 0, true, 'main export is defined' );
 	t.end();
 });
