@@ -42,6 +42,10 @@
   "dependencies": {
     "@stdlib/constants-float64-ninf": "^0.2.2",
     "@stdlib/constants-float64-pinf": "^0.2.2",
+    "@stdlib/napi-argv": "^0.2.2",
+    "@stdlib/napi-argv-double": "^0.2.1",
+    "@stdlib/napi-create-int32": "^0.0.2",
+    "@stdlib/napi-export": "^0.2.2",
     "@stdlib/utils-library-manifest": "^0.2.2"
   },
   "devDependencies": {
